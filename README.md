@@ -42,38 +42,17 @@ Python脚本，读取Windows注册表中Navicat保存的数据库连接配置，
  pip install pycryptodomex
 ```
 
-## 打包为可执行程序
-> 安装 `pyinstaller`
-
-``` bash
-pip install pywin32
-pip install pyinstaller
-```
-
-> 参数函数
-
-- -F 表示生成单个可执行文件
-	
-- -w 表示去掉控制台窗口，这在GUI界面时非常有用。不过如果是命令行程序的话那就把这个选项删除吧！
-	
-- -p 表示你自己自定义需要加载的类路径，一般情况下用不到
-	
-- -i 表示可执行文件的图标
-
-> 打包举例
-
-``` bash
-# 打包为 exe 可执行文件
-	pyinstaller -F main.py
-# 加载 logo
-	pyinstaller -F -i `icon\logo.ico` main.py
-# 完整打包案例
-	pyinstaller -F --clean --noconfirm --hidden-import=navicat-connection-parser --name navicat-connection-parser main.py
-```
-
 ## notepad++ 运行python脚本
 ```bash
 cmd /k cd /d "$(CURRENT_DIRECTORY)" & python "$(FULL_CURRENT_PATH)" & echo. & pause & exit
+```
+
+## 代码推送与镜像同步说明
+
+本项目的代码推送流程如下：
+
+```text
+本地代码 → AtomGit → 自动镜像同步 → 腾讯云 CNB / GitHub / Gitee
 ```
 
 ## 请我喝杯咖啡
@@ -96,11 +75,11 @@ cmd /k cd /d "$(CURRENT_DIRECTORY)" & python "$(FULL_CURRENT_PATH)" & echo. & pa
     <img src="images/favicon_cnb.ico" width="18" height="18" alt="腾讯云 CNB">&nbsp;腾讯云 CNB
   </a>
   &nbsp;&nbsp;
-  <a href="https://gitee.com/techtest/navicat-connection-parser.git" target="_blank" rel="noopener">
-    <img src="images/favicon_gitee.ico" width="18" height="18" alt="Gitee">&nbsp;Gitee
-  </a>
-  &nbsp;&nbsp;
   <a href="https://github.com/iaoexl/navicat-connection-parser.git" target="_blank" rel="noopener">
     <img src="images/favicon_github.png" width="18" height="18" alt="GitHub">&nbsp;GitHub
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://gitee.com/techtest/navicat-connection-parser.git" target="_blank" rel="noopener">
+    <img src="images/favicon_gitee.ico" width="18" height="18" alt="Gitee">&nbsp;Gitee
   </a>
 </p>
